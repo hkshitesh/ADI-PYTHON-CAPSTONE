@@ -10,10 +10,10 @@ class TestString(unittest.TestCase):
         self.assertTrue(is_palindrome("ADA"), "ADA")
 
     def test_pos_count_characters(self):
-        self.assertTrue(count_characters("ADI"),3)
+        self.assertEqual(count_characters("ADI"),3)
 
     def test_pos_join_strings(self):
-        self.assertTrue(join_strings("ADI","BENGULURU"),"ADIBENGULURU")
+        self.assertEqual(join_strings("ADI","BENGULURU"),"ADI BENGULURU")
 
 if __name__=='__main__':
     unittest.main()
