@@ -15,7 +15,7 @@ mycursor.execute("show databases")
 for db in mycursor:
     print(db)
 
-Create a table and insert data
+# Create a table and insert data
 mycursor.execute("CREATE TABLE university (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INTEGER, gender VARCHAR(255), major VARCHAR(255) )")
 
 sql = "INSERT INTO university (id, name, age, gender, major) VALUES (%s, %s, %s, %s, %s)"
@@ -37,13 +37,13 @@ mydb.commit()
 
 print(mycursor.rowcount, "record inserted.")
 
-2. Retrieve all entries
+# 2. Retrieve all entries
 mycursor.execute("SELECT * FROM university")
 myresult = mycursor.fetchall()
 for x in myresult:
   print(x)
 
-3. Retrieve entry by id
+# 3. Retrieve entry by id
 mycursor.execute("SELECT * FROM university where id =3")
 myresult = mycursor.fetchall()
 for x in myresult:
