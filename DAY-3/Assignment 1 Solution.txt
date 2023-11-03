@@ -1,0 +1,26 @@
+import csv
+
+# Task 1: Reading from a CSV File
+print("Reading from the CSV file:")
+try:
+    with open('input.csv', mode='r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(row)
+except FileNotFoundError:
+    print("The file 'input.csv' does not exist.")
+
+# Task 2: Writing to a CSV File
+print("Writing to the CSV file:")
+data = [
+    ['Name', 'Age', 'City'],
+    ['John Doe', '30', 'New York'],
+    ['Jane Smith', '25', 'San Francisco'],
+    ['Bob Johnson', '35', 'Chicago']
+]
+
+with open('output.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    for row in data:
+        writer.writerow(row)
+    print("The data has been written to 'output.csv'.")
