@@ -1,0 +1,37 @@
+import pymongo
+
+# Connect to the MongoDB server
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["university"]
+mycol = mydb["students"]
+
+# Insert data into the collection
+data = [
+    {"name": "John Doe", "age": 20, "major": "Computer Science"},
+    {"name": "Jane Smith", "age": 21, "major": "Engineering"},
+    {"name": "Bob Johnson", "age": 19, "major": "Mathematics"}
+]
+
+mycol.insert_many(data)
+
+# Query the database
+print("All student records:")
+for student in mycol.find():
+    print(student)
+
+# Update a student's information
+myquery = {"name": "John Doe"}
+newvalues = {"$set": {"age": 21}}
+mycol.update_one(myquery, newvalues)
+
+# Delete a student record
+myquery = {"name": "Bob Johnson"}
+mycol.delete_one(myquery)
+
+# Print the updated list of students
+print("Updated list of students:")
+for student in mycol.find():
+    print(student)
+
+# Close the connection
+myclient.close()

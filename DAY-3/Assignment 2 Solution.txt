@@ -1,0 +1,71 @@
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="university"
+)
+
+mycursor = mydb.cursor()
+
+def add_student(name, age, gender, major):
+    sql = "INSERT INTO students (name, age, gender, major) VALUES (%s, %s, %s, %s)"
+    val = (name, age, gender, major)
+    mycursor.execute(sql, val)
+    mydb.commit()
+    print(mycursor.rowcount, "record inserted.")
+
+def retrieve_student(student_id):
+    sql = "SELECT * FROM students WHERE id = %s"
+    val = (student_id,)
+    mycursor.execute(sql, val)
+    myresult = mycursor.fetchall()
+    for x in myresult:
+        print(x)
+
+def update_student(student_id, name, age, gender, major):
+    sql = "UPDATE students SET name = %s, age = %s, gender = %s, major = %s WHERE id = %s"
+    val = (name, age, gender, major, student_id)
+    mycursor.execute(sql, val)
+    mydb.commit()
+    print(mycursor.rowcount, "record(s) updated.")
+
+def delete_student(student_id):
+    sql = "DELETE FROM students WHERE id = %s"
+    val = (student_id,)
+    mycursor.execute(sql, val)
+    mydb.commit()
+    print(mycursor.rowcount, "record(s) deleted.")
+
+while True:
+    print("1. Add a new student")
+    print("2. Retrieve student information by ID")
+    print("3. Update student information")
+    print("4. Delete a student record")
+    print("5. Exit")
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        name = input("Enter student name: ")
+        age = input("Enter student age: ")
+        gender = input("Enter student gender: ")
+        major = input("Enter student major: ")
+        add_student(name, age, gender, major)
+    elif choice == "2":
+        student_id = input("Enter student ID: ")
+        retrieve_student(student_id)
+    elif choice == "3":
+        student_id = input("Enter student ID: ")
+        name = input("Enter updated student name: ")
+        age = input("Enter updated student age: ")
+        gender = input("Enter updated student gender: ")
+        major = input("Enter updated student major: ")
+        update_student(student_id, name, age, gender, major)
+    elif choice == "4":
+        student_id = input("Enter student ID: ")
+        delete_student(student_id)
+    elif choice == "5":
+        break
+
+mydb.close()
