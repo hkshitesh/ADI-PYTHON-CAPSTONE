@@ -1,0 +1,7 @@
+Date: Nov 03, 2023 - Time: 11:48:56 : ETL Job Started. 
+Date: Nov 03, 2023 - Time: 11:48:57 : Extract Phase Started. 
+Date: Nov 03, 2023 - Time: 11:48:57 : Extract Phase Ended. 
+Date: Nov 03, 2023 - Time: 11:48:58 : Transform Phase Started. 
+Date: Nov 03, 2023 - Time: 11:48:58 : Transform Phase Ended. 
+Date: Nov 03, 2023 - Time: 11:48:59 : Load Phase Started. 
+Date: Nov 03, 2023 - Time: 11:49:00 : Load Phase Ended. 
