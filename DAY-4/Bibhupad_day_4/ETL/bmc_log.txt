@@ -1,0 +1,7 @@
+Date: Nov 03, 2023 - Time: 11:35:37 : ETL JOB STARTEDDate: Nov 03, 2023 - Time: 11:35:37 : Extract Phase StartedDate: Nov 03, 2023 - Time: 11:36:26 : Extract phase ended 
+ Transform phase startedDate: Nov 03, 2023 - Time: 11:39:29 : ETL JOB STARTEDDate: Nov 03, 2023 - Time: 11:39:29 : Extract Phase StartedDate: Nov 03, 2023 - Time: 11:39:29 : Extract phase ended 
+ Transform phase startedDate: Nov 03, 2023 - Time: 11:43:32 : ETL JOB STARTEDDate: Nov 03, 2023 - Time: 11:43:32 : Extract Phase StartedDate: Nov 03, 2023 - Time: 11:43:32 : Extract phase ended 
+ Transform phase startedDate: Nov 03, 2023 - Time: 11:46:38 : ETL JOB STARTEDDate: Nov 03, 2023 - Time: 11:46:38 : Extract Phase StartedDate: Nov 03, 2023 - Time: 11:46:38 : Extract phase ended 
+ Transform phase startedDate: Nov 03, 2023 - Time: 11:47:38 : ETL JOB STARTEDDate: Nov 03, 2023 - Time: 11:47:38 : Extract Phase StartedDate: Nov 03, 2023 - Time: 11:47:38 : Extract phase ended 
+ Transform phase startedDate: Nov 03, 2023 - Time: 11:47:38 : Transofrm phase ended 
+ Loading csv phase started
